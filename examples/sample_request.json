@@ -1,0 +1,14 @@
+{
+  "features": {
+    "CreditScore": 600,
+    "Geography": "France",
+    "Gender": "Female",
+    "Age": 40,
+    "Tenure": 3,
+    "Balance": 60000.0,
+    "NumOfProducts": 2,
+    "HasCrCard": 1,
+    "IsActiveMember": 1,
+    "EstimatedSalary": 50000.0
+  }
+}

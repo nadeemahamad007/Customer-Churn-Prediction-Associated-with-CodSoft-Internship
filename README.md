@@ -1,34 +1,124 @@
 # CUSTOMER-CHURN-PREDICTION
 
-This project focuses on developing a predictive model to forecast customer churn for a subscription-based service or business. By leveraging historical customer data, including features such as usage behavior and customer demographics, the model aims to identify customers at risk of leaving the service. The project explores various machine learning algorithms, including Logistic Regression, Random Forests, and Gradient Boosting, to build an accurate and reliable churn prediction model.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-# Project Overview
-Aims to develop a machine learning model to predict customer churn for a subscription-based service or business. Using historical customer data that includes features like usage behavior and customer demographics, the goal is to identify patterns and key factors that contribute to customer churn. The model helps in proactively addressing customer retention by predicting which customers are at risk of leaving.
+Machine Learning project focused on predicting customer churn using classification models and customer behavior data. The project analyzes the `Churn_Modelling.csv` dataset, compares multiple algorithms, and exposes a simple Flask API for prediction.
 
-# Technologies Used
-**1. Python:** For data analysis, feature engineering, and model implementation.
+## Author
 
-**2. Pandas & NumPy:** For data manipulation and analysis.
+**Nadeem Ahamad**
 
-**3. Scikit-learn:** For building and evaluating machine learning models, including Logistic Regression, Random Forests, and Gradient Boosting.
+## Project Overview
 
-**4. Matplotlib & Seaborn:** For data visualization and exploratory data analysis (EDA).
+This project identifies customers who are likely to leave a business or subscription service. It uses exploratory analysis, preprocessing, model training, and evaluation to support better customer retention decisions.
 
-**5. Jupyter Notebook:** For developing and presenting the project in an interactive environment.
+## Key Highlights
 
-**6. Git & GitHub:** For version control and project collaboration.
+- Built and compared Logistic Regression, Random Forest, and Gradient Boosting models.
+- Applied preprocessing with scaling and one-hot encoding for mixed feature types.
+- Tuned the Random Forest model using `GridSearchCV`.
+- Saved the best trained model for reuse in an API workflow.
+- Added a Flask inference API for single-customer churn prediction.
 
-# Project Highlights
+## Tech Stack
 
-**1. Data Analysis:** Comprehensive examination of customer data to identify trends and key factors that influence churn.
+- Python
+- Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Flask
 
-**2. Feature Engineering:** Transformation of raw data into meaningful features to enhance model accuracy.
+## Repository Structure
 
-**3. Model Training:** Implementation of multiple algorithms, including Logistic Regression, Random Forests, and Gradient Boosting, with hyperparameter tuning to improve performance.
+```text
+.
+|-- CUSTOMER CHURN.ipynb
+|-- app.py
+|-- data/
+|   `-- Churn_Modelling.csv
+|-- examples/
+|   `-- sample_request.json
+|-- models/
+|-- src/
+|   `-- train.py
+|-- requirements.txt
+`-- LICENSE
+```
 
-**4. Model Evaluation:** Detailed assessment of model performance using metrics like accuracy, precision, recall, and F1-score.
+## Dataset
 
-**5. Deployment:** Guidelines for deploying the model in a production environment for real-time churn prediction.
+- Source file included in this repository: [data/Churn_Modelling.csv](data/Churn_Modelling.csv)
+- Original reference note: [Link for DataSet](./Link%20for%20DataSet)
 
-# Conclusion
-The Customer Churn Prediction project successfully demonstrates how machine learning can be leveraged to predict customer churn, enabling businesses to take preemptive actions to retain customers. By comparing different algorithms and optimizing model performance, the project highlights the importance of data-driven decision-making in customer retention strategies. The insights gained from this model can be crucial for improving customer satisfaction and reducing churn rates.
+## Model Performance
+
+Based on the notebook results:
+
+- Logistic Regression accuracy: `0.81`
+- Random Forest accuracy: `0.86`
+- Gradient Boosting accuracy: `0.87`
+- Tuned Random Forest accuracy: `0.87`
+- Best tuned Random Forest parameters: `n_estimators=200`, `max_depth=None`, `min_samples_split=10`
+
+## How To Run
+
+1. Clone the repository.
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Train the model:
+
+```bash
+python src/train.py
+```
+
+This command creates `models/churn_model.pkl`, which is ignored from Git tracking.
+
+4. Start the API:
+
+```bash
+python app.py
+```
+
+## Sample Prediction Request
+
+Use the example file at [examples/sample_request.json](examples/sample_request.json), or send a request like this:
+
+```json
+{
+  "features": {
+    "CreditScore": 600,
+    "Geography": "France",
+    "Gender": "Female",
+    "Age": 40,
+    "Tenure": 3,
+    "Balance": 60000.0,
+    "NumOfProducts": 2,
+    "HasCrCard": 1,
+    "IsActiveMember": 1,
+    "EstimatedSalary": 50000.0
+  }
+}
+```
+
+## LinkedIn And Project Portfolio
+
+You can showcase this repository as one of your CodSoft internship projects on LinkedIn.
+
+- Project 1: Customer Churn Prediction
+- Project 2: Food Delivery Cost, Discount, Revenue, and Profitability Analysis using Python
+- Project 3: Add your third completed internship project here
+
+## License
+
+This project is available under the MIT License.
