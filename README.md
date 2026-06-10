@@ -107,10 +107,6 @@ Use the example file at [examples/sample_request.json](examples/sample_request.j
 }
 ```
 
-## License
-
-This project is available under the MIT License.
-
 ## Author
 
 Nadeem Ahamad
