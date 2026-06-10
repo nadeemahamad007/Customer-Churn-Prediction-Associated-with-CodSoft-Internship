@@ -8,10 +8,6 @@
 
 Machine Learning project focused on predicting customer churn using classification models and customer behavior data. The project analyzes the `Churn_Modelling.csv` dataset, compares multiple algorithms, and exposes a simple Flask API for prediction.
 
-## Author
-
-**Nadeem Ahamad**
-
 ## Project Overview
 
 This project identifies customers who are likely to leave a business or subscription service. It uses exploratory analysis, preprocessing, model training, and evaluation to support better customer retention decisions.
@@ -110,14 +106,6 @@ Use the example file at [examples/sample_request.json](examples/sample_request.j
   }
 }
 ```
-
-## LinkedIn And Project Portfolio
-
-You can showcase this repository as one of your CodSoft internship projects on LinkedIn.
-
-- Project 1: Customer Churn Prediction
-- Project 2: Food Delivery Cost, Discount, Revenue, and Profitability Analysis using Python
-- Project 3: Add your third completed internship project here
 
 ## License
 
