@@ -110,3 +110,9 @@ Use the example file at [examples/sample_request.json](examples/sample_request.j
 ## License
 
 This project is available under the MIT License.
+
+## Author
+
+Nadeem Ahamad
+
+Machine Learning project focused on Customer Churn Prediction, customer risk classification, churn pattern analysis, and model evaluation using Python by CodSoft Internship Project.
